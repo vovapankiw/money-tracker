@@ -1,0 +1,1 @@
+// Here will app init
