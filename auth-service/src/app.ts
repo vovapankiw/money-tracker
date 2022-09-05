@@ -10,9 +10,9 @@ app.use(json());
 app.use(userRoutes);
 
 app.all('*', () => {
-  throw new Error('Route not found'); 
+  throw new Error('Route not found');
 });
 
-app.use(errorHandler)
+app.use(errorHandler);
 
 export { app };
