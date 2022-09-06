@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 
 const currentUser = async (req: Request, res: Response) => {
-  res.send('I am Vova');
+  res.send({ name: 'Here will be name of teh user' });
 };
 
 const signin = async (req: Request, res: Response) => {
