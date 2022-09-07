@@ -1,6 +1,8 @@
 import { DataSource } from 'typeorm';
 import { join } from 'path';
-import { Token } from './enteties/token.entetie';
+import { Token } from './Models/token.entetie';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+require('dotenv').config();
 
 const AuthDataSource = new DataSource({
   type: 'postgres',
@@ -9,7 +11,7 @@ const AuthDataSource = new DataSource({
   username: process.env.POSTGRES_USER,
   password: process.env.POSTGRES_PASSWORD,
   database: process.env.POSTGRES_DB,
-  entities: [Token],
+  entities: ['./Models/*.ts'],
   migrations: [join(__dirname, '/migration/*.{ts,js}')],
   synchronize: true,
 });
