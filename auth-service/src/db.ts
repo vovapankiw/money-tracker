@@ -13,7 +13,7 @@ const AuthDataSource = new DataSource({
   database: process.env.POSTGRES_DB,
   entities: ['./Models/*.ts'],
   migrations: [join(__dirname, '/migration/*.{ts,js}')],
-  synchronize: true,
+  synchronize: false,
 });
 
 AuthDataSource.initialize()
